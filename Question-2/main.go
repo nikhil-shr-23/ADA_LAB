@@ -64,11 +64,13 @@ func generateRandomArray(size int) []int {
 
 func main() {
 	b := &Benchmarker{}
-	size := 5000
+	var size int
+	fmt.Print("Enter array size to benchmark--> ")
+	fmt.Scan(&size)
 	data := generateRandomArray(size)
 
 	fmt.Printf("Benchmarking with array size: %d\n", size)
-	fmt.Println("--------------------------------------------------")
+	fmt.Println("----------------------------------------")
 
 	// Bubble Sort
 	arrBubble := make([]int, size)
